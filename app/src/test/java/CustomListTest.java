@@ -23,4 +23,12 @@ public class CustomListTest {
         list.addCity(new City("Halifax","NS")); //add city Halifax and province NS to list
         assertEquals(listSize+1, list.getCount()); // check if addCity added a city expect to see getCount return 1 if successful
     }
+
+    @Test
+    public void hasCityTest(){
+        City city = new City("Edmonton","AB");
+        list.addCity(city);
+        assertEquals(true, list.hasCity(city)); // check if addCity added a city expect to see getCount return 1 if successful
+    }
+
 }
