@@ -31,4 +31,13 @@ public class CustomListTest {
         assertEquals(true, list.hasCity(city)); // check if addCity added a city expect to see getCount return 1 if successful
     }
 
+
+    @Test
+    public void deleteCityTest(){
+        City city = new City("Edmonton","AB");
+        list.addCity(city);
+        assertEquals(true,list.hasCity(city));
+        list.deleteCity(city);
+        assertEquals(false,list.hasCity(city)); // check if addCity added a city expect to see getCount return 1 if successful
+    }
 }
